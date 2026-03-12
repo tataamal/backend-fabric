@@ -14,47 +14,92 @@ const OMIT_FIELDS = new Set([
 
 const RENAME_MAP: Record<string, string> = {
   // serial
-  SERNR: 'serial_number',
+  SERIAL_NO: 'serial_number',
 
-  // Material per proses
-  MATNR1: 'material_assy',
-  MATNR2: 'material_painting',
-  MATNR3: 'material_packing',
+  // Net Price
+  NETPR: 'net_price',
 
-  // Batch per proses
-  CHARG1: 'batch_assy',
-  CHARG2: 'batch_painting',
-  CHARG3: 'batch_packing',
+  // Currency
+  WAERK: 'currency',
 
-  // Storage location per proses
-  LGORT1: 'storage_assy',
-  LGORT2: 'storage_painting',
-  LGORT3: 'storage_packing',
+  // Material Inspection
+  MATNR1: 'material_inspection_assy',
+  MATNR2: 'material_inspection_painting',
+  MATNR3: 'material_inspection_packing',
 
-  // Order per proses
-  AUFNR1: 'pro_assy',
-  AUFNR2: 'pro_painting',
-  AUFNR3: 'pro_packing',
+  // Material Number
+  MATNR1X: 'material_assy',
+  MATNR2X: 'material_painting',
+  MATNR3X: 'material_packing',
 
-  // Planner per proses
-  DISPO1: 'mrp_assy',
-  DISPO2: 'mrp_painting',
-  DISPO3: 'mrp_packing',
+  // Batch Number Inspection
+  CHARG1: 'batch_inspection_assy',
+  CHARG2: 'batch_inspection_painting',
+  CHARG3: 'batch_inspection_packing',
+  // Batch Number
+  CHARG1X: 'batch_assy',
+  CHARG2X: 'batch_painting',
+  CHARG3X: 'batch_packing',
 
-  // Material document per proses
-  MBLNR1: 'material_doc_assy',
-  MBLNR2: 'material_doc_painting',
-  MBLNR3: 'material_doc_packing',
+  // Storage location
+  LGORT1X: 'storage_assy',
+  LGORT2X: 'storage_painting',
+  LGORT3X: 'storage_packing',
 
-  // Posting date per proses
-  BUDAT1: 'posting_date_assy',
-  BUDAT2: 'posting_date_painting',
-  BUDAT3: 'posting_date_packing',
+  // Storage location Inspection
+  LGORT1: 'storage_inspection_assy',
+  LGORT2: 'storage_inspection_painting',
+  LGORT3: 'storage_inspection_packing',
 
-  // Personel
-  PERNR1: 'nik_assy',
-  PERNR2: 'nik_painting',
-  PERNR3: 'nik_packing',
+  // Order
+  AUFNR1X: 'pro_assy',
+  AUFNR2X: 'pro_painting',
+  AUFNR3X: 'pro_packing',
+
+  // Order Inspection
+  AUFNR1: 'pro_inspection_assy',
+  AUFNR2: 'pro_inspection_painting',
+  AUFNR3: 'pro_inspection_packing',
+
+  // MRP
+  DISPO1X: 'mrp_assy',
+  DISPO2X: 'mrp_painting',
+  DISPO3X: 'mrp_packing',
+
+  // MRP Inspection
+  DISPO1: 'mrp_inspection_assy',
+  DISPO2: 'mrp_inspection_painting',
+  DISPO3: 'mrp_inspection_packing',
+
+  // Material document
+  MBLNR1X: 'material_doc_assy',
+  MBLNR2X: 'material_doc_painting',
+  MBLNR3X: 'material_doc_packing',
+
+  // Material document Inspection
+  MBLNR1: 'material_doc_inspection_assy',
+  MBLNR2: 'material_doc_inspection_painting',
+  MBLNR3: 'material_doc_inspection_packing',
+
+  // Posting date
+  BUDAT1X: 'posting_date_assy',
+  BUDAT2X: 'posting_date_painting',
+  BUDAT3X: 'posting_date_packing',
+
+  // Posting date Inspection
+  BUDAT1: 'posting_date_inspection_assy',
+  BUDAT2: 'posting_date_inspection_painting',
+  BUDAT3: 'posting_date_inspection_packing',
+
+  // Personel Number
+  PERNR1X: 'person_assy',
+  PERNR2X: 'person_painting',
+  PERNR3X: 'person_packing',
+
+  // Personel Instpect
+  PERNR1: 'inspect_assy',
+  PERNR2: 'inspect_painting',
+  PERNR3: 'inspect_packing',
 };
 
 function toIsoDateIfSapDate(v: any): any {

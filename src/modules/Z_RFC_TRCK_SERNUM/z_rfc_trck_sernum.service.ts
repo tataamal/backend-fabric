@@ -129,10 +129,16 @@ export class ZRfcTrckSernumService {
       }
     }
 
+    const total_rows = results.reduce((sum, current) => {
+      return sum + (current.row_count || 0);
+    }, 0);
+    // ------------------------
+
     return {
       ok: results.every((r) => r.ok),
       rfc: RFC_NAME,
       run_count: results.length,
+      total_rows,
       results,
     };
   }
