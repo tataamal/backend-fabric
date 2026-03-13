@@ -31,14 +31,42 @@ export function toSapDate(value: any): string | null {
   return val;
 }
 
+function stripLeadingZero(value: any): string | null {
+  const val = cleanString(value);
+  if (!val) return null;
+
+  const stripped = val.replace(/^0+/, '');
+  return stripped === '' ? '0' : stripped;
+}
+
+export function mergePrItem(pr: any, prItem: any): string | null {
+  const prVal = cleanString(pr);
+  const prItemVal = stripLeadingZero(prItem);
+
+  if (!prVal && !prItemVal) return null;
+  if (!prVal) return prItemVal;
+  if (!prItemVal) return prVal;
+
+  return `${prVal}-${prItemVal}`;
+}
+
+export function mergePoItem(po: any, poItem: any): string | null {
+  const poVal = cleanString(po);
+  const poItemVal = stripLeadingZero(poItem);
+
+  if (!poVal && !poItemVal) return null;
+  if (!poVal) return poItemVal;
+  if (!poItemVal) return poVal;
+
+  return `${poVal}-${poItemVal}`;
+}
+
 export function normalizeTData(rows: any[] | undefined | null) {
   if (!Array.isArray(rows)) return [];
 
   return rows.map((row) => ({
-    pr: cleanString(row?.BANFN),
-    pr_item: cleanString(row?.BNFPO),
-    po: cleanString(row?.EBELN),
-    po_item: cleanString(row?.EBELP),
+    pr_item: mergePrItem(row?.BANFN, row?.BNFPO),
+    po_item: mergePoItem(row?.EBELN, row?.EBELP),
     material: cleanString(row?.MATNR),
     material_desc: cleanString(row?.MAKTX),
     material_group: cleanString(row?.MATKL),
