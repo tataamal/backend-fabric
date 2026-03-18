@@ -1,0 +1,627 @@
+{
+  "changings": [],
+  "exceptions": [],
+  "exports": [
+    {
+      "abap_type": "U",
+      "decimals": 0,
+      "default": "",
+      "direction": "EXPORT",
+      "fields": [],
+      "length": null,
+      "name": "RETURN",
+      "optional": false,
+      "rowtype": "BAPIRET2"
+    }
+  ],
+  "imports": [
+    {
+      "abap_type": "C",
+      "decimals": 0,
+      "default": "",
+      "direction": "IMPORT",
+      "fields": [],
+      "length": null,
+      "name": "BAGIAN",
+      "optional": true,
+      "rowtype": "CHAR3"
+    },
+    {
+      "abap_type": "C",
+      "decimals": 0,
+      "default": "",
+      "direction": "IMPORT",
+      "fields": [],
+      "length": null,
+      "name": "SERIAL_NO",
+      "optional": true,
+      "rowtype": "YSERIAL_CO01"
+    }
+  ],
+  "ok": true,
+  "rfc_name": "Z_RFC_TRCK_SERNUM",
+  "tables": [
+    {
+      "abap_type": "U",
+      "decimals": 0,
+      "default": "",
+      "direction": "TABLES",
+      "fields": [
+        {
+          "abap_type": "C",
+          "decimals": 0,
+          "length": null,
+          "name": "MANDT"
+        },
+        {
+          "abap_type": "8",
+          "decimals": 0,
+          "length": null,
+          "name": "OBKNR"
+        },
+        {
+          "abap_type": "C",
+          "decimals": 0,
+          "length": null,
+          "name": "SERNR"
+        },
+        {
+          "abap_type": "C",
+          "decimals": 0,
+          "length": null,
+          "name": "SERIALNO"
+        },
+        {
+          "abap_type": "C",
+          "decimals": 0,
+          "length": null,
+          "name": "KDAUF"
+        },
+        {
+          "abap_type": "N",
+          "decimals": 0,
+          "length": null,
+          "name": "KDPOS"
+        },
+        {
+          "abap_type": "P",
+          "decimals": 2,
+          "length": null,
+          "name": "NETPR"
+        },
+        {
+          "abap_type": "C",
+          "decimals": 0,
+          "length": null,
+          "name": "WAERK"
+        },
+        {
+          "abap_type": "P",
+          "decimals": 2,
+          "length": null,
+          "name": "STPRS"
+        },
+        {
+          "abap_type": "C",
+          "decimals": 0,
+          "length": null,
+          "name": "MATNR"
+        },
+        {
+          "abap_type": "C",
+          "decimals": 0,
+          "length": null,
+          "name": "MATNR1"
+        },
+        {
+          "abap_type": "C",
+          "decimals": 0,
+          "length": null,
+          "name": "MATNR2"
+        },
+        {
+          "abap_type": "C",
+          "decimals": 0,
+          "length": null,
+          "name": "MATNR3"
+        },
+        {
+          "abap_type": "C",
+          "decimals": 0,
+          "length": null,
+          "name": "MATNR1X"
+        },
+        {
+          "abap_type": "C",
+          "decimals": 0,
+          "length": null,
+          "name": "MATNR2X"
+        },
+        {
+          "abap_type": "C",
+          "decimals": 0,
+          "length": null,
+          "name": "MATNR3X"
+        },
+        {
+          "abap_type": "C",
+          "decimals": 0,
+          "length": null,
+          "name": "CHARG1"
+        },
+        {
+          "abap_type": "C",
+          "decimals": 0,
+          "length": null,
+          "name": "CHARG2"
+        },
+        {
+          "abap_type": "C",
+          "decimals": 0,
+          "length": null,
+          "name": "CHARG3"
+        },
+        {
+          "abap_type": "C",
+          "decimals": 0,
+          "length": null,
+          "name": "CHARG1X"
+        },
+        {
+          "abap_type": "C",
+          "decimals": 0,
+          "length": null,
+          "name": "CHARG2X"
+        },
+        {
+          "abap_type": "C",
+          "decimals": 0,
+          "length": null,
+          "name": "CHARG3X"
+        },
+        {
+          "abap_type": "C",
+          "decimals": 0,
+          "length": null,
+          "name": "WERKS"
+        },
+        {
+          "abap_type": "C",
+          "decimals": 0,
+          "length": null,
+          "name": "LGORT"
+        },
+        {
+          "abap_type": "C",
+          "decimals": 0,
+          "length": null,
+          "name": "LGORT1"
+        },
+        {
+          "abap_type": "C",
+          "decimals": 0,
+          "length": null,
+          "name": "LGORT2"
+        },
+        {
+          "abap_type": "C",
+          "decimals": 0,
+          "length": null,
+          "name": "LGORT3"
+        },
+        {
+          "abap_type": "C",
+          "decimals": 0,
+          "length": null,
+          "name": "LGORT1X"
+        },
+        {
+          "abap_type": "C",
+          "decimals": 0,
+          "length": null,
+          "name": "LGORT2X"
+        },
+        {
+          "abap_type": "C",
+          "decimals": 0,
+          "length": null,
+          "name": "LGORT3X"
+        },
+        {
+          "abap_type": "C",
+          "decimals": 0,
+          "length": null,
+          "name": "AUFNR"
+        },
+        {
+          "abap_type": "C",
+          "decimals": 0,
+          "length": null,
+          "name": "AUFNR1"
+        },
+        {
+          "abap_type": "C",
+          "decimals": 0,
+          "length": null,
+          "name": "AUFNR2"
+        },
+        {
+          "abap_type": "C",
+          "decimals": 0,
+          "length": null,
+          "name": "AUFNR3"
+        },
+        {
+          "abap_type": "C",
+          "decimals": 0,
+          "length": null,
+          "name": "AUFNR1X"
+        },
+        {
+          "abap_type": "C",
+          "decimals": 0,
+          "length": null,
+          "name": "AUFNR2X"
+        },
+        {
+          "abap_type": "C",
+          "decimals": 0,
+          "length": null,
+          "name": "AUFNR3X"
+        },
+        {
+          "abap_type": "C",
+          "decimals": 0,
+          "length": null,
+          "name": "DISPO"
+        },
+        {
+          "abap_type": "C",
+          "decimals": 0,
+          "length": null,
+          "name": "DISPO1"
+        },
+        {
+          "abap_type": "C",
+          "decimals": 0,
+          "length": null,
+          "name": "DISPO2"
+        },
+        {
+          "abap_type": "C",
+          "decimals": 0,
+          "length": null,
+          "name": "DISPO3"
+        },
+        {
+          "abap_type": "C",
+          "decimals": 0,
+          "length": null,
+          "name": "DISPO1X"
+        },
+        {
+          "abap_type": "C",
+          "decimals": 0,
+          "length": null,
+          "name": "DISPO2X"
+        },
+        {
+          "abap_type": "C",
+          "decimals": 0,
+          "length": null,
+          "name": "DISPO3X"
+        },
+        {
+          "abap_type": "C",
+          "decimals": 0,
+          "length": null,
+          "name": "MBLNR1"
+        },
+        {
+          "abap_type": "C",
+          "decimals": 0,
+          "length": null,
+          "name": "MBLNR2"
+        },
+        {
+          "abap_type": "C",
+          "decimals": 0,
+          "length": null,
+          "name": "MBLNR3"
+        },
+        {
+          "abap_type": "C",
+          "decimals": 0,
+          "length": null,
+          "name": "MBLNR1X"
+        },
+        {
+          "abap_type": "C",
+          "decimals": 0,
+          "length": null,
+          "name": "MBLNR2X"
+        },
+        {
+          "abap_type": "C",
+          "decimals": 0,
+          "length": null,
+          "name": "MBLNR3X"
+        },
+        {
+          "abap_type": "D",
+          "decimals": 0,
+          "length": null,
+          "name": "BUDAT1"
+        },
+        {
+          "abap_type": "D",
+          "decimals": 0,
+          "length": null,
+          "name": "BUDAT2"
+        },
+        {
+          "abap_type": "D",
+          "decimals": 0,
+          "length": null,
+          "name": "BUDAT3"
+        },
+        {
+          "abap_type": "D",
+          "decimals": 0,
+          "length": null,
+          "name": "BUDAT1X"
+        },
+        {
+          "abap_type": "D",
+          "decimals": 0,
+          "length": null,
+          "name": "BUDAT2X"
+        },
+        {
+          "abap_type": "D",
+          "decimals": 0,
+          "length": null,
+          "name": "BUDAT3X"
+        },
+        {
+          "abap_type": "C",
+          "decimals": 0,
+          "length": null,
+          "name": "PERNR1"
+        },
+        {
+          "abap_type": "C",
+          "decimals": 0,
+          "length": null,
+          "name": "PERNR2"
+        },
+        {
+          "abap_type": "C",
+          "decimals": 0,
+          "length": null,
+          "name": "PERNR3"
+        },
+        {
+          "abap_type": "N",
+          "decimals": 0,
+          "length": null,
+          "name": "PERNR1X"
+        },
+        {
+          "abap_type": "N",
+          "decimals": 0,
+          "length": null,
+          "name": "PERNR2X"
+        },
+        {
+          "abap_type": "N",
+          "decimals": 0,
+          "length": null,
+          "name": "PERNR3X"
+        },
+        {
+          "abap_type": "D",
+          "decimals": 0,
+          "length": null,
+          "name": "FTRMS1"
+        },
+        {
+          "abap_type": "D",
+          "decimals": 0,
+          "length": null,
+          "name": "FTRMS2"
+        },
+        {
+          "abap_type": "D",
+          "decimals": 0,
+          "length": null,
+          "name": "FTRMS3"
+        },
+        {
+          "abap_type": "I",
+          "decimals": 0,
+          "length": null,
+          "name": "ASSY"
+        },
+        {
+          "abap_type": "I",
+          "decimals": 0,
+          "length": null,
+          "name": "PAINT"
+        },
+        {
+          "abap_type": "I",
+          "decimals": 0,
+          "length": null,
+          "name": "PACKG"
+        },
+        {
+          "abap_type": "P",
+          "decimals": 2,
+          "length": null,
+          "name": "P_MAT1"
+        },
+        {
+          "abap_type": "P",
+          "decimals": 2,
+          "length": null,
+          "name": "P_MAT2"
+        },
+        {
+          "abap_type": "P",
+          "decimals": 2,
+          "length": null,
+          "name": "P_MAT3"
+        },
+        {
+          "abap_type": "P",
+          "decimals": 2,
+          "length": null,
+          "name": "A_MAT1"
+        },
+        {
+          "abap_type": "P",
+          "decimals": 2,
+          "length": null,
+          "name": "A_MAT2"
+        },
+        {
+          "abap_type": "P",
+          "decimals": 2,
+          "length": null,
+          "name": "A_MAT3"
+        },
+        {
+          "abap_type": "P",
+          "decimals": 2,
+          "length": null,
+          "name": "V_MAT1"
+        },
+        {
+          "abap_type": "P",
+          "decimals": 2,
+          "length": null,
+          "name": "V_MAT2"
+        },
+        {
+          "abap_type": "P",
+          "decimals": 2,
+          "length": null,
+          "name": "V_MAT3"
+        },
+        {
+          "abap_type": "P",
+          "decimals": 2,
+          "length": null,
+          "name": "P_ACT1"
+        },
+        {
+          "abap_type": "P",
+          "decimals": 2,
+          "length": null,
+          "name": "P_ACT2"
+        },
+        {
+          "abap_type": "P",
+          "decimals": 2,
+          "length": null,
+          "name": "P_ACT3"
+        },
+        {
+          "abap_type": "P",
+          "decimals": 2,
+          "length": null,
+          "name": "A_ACT1"
+        },
+        {
+          "abap_type": "P",
+          "decimals": 2,
+          "length": null,
+          "name": "A_ACT2"
+        },
+        {
+          "abap_type": "P",
+          "decimals": 2,
+          "length": null,
+          "name": "A_ACT3"
+        },
+        {
+          "abap_type": "P",
+          "decimals": 2,
+          "length": null,
+          "name": "V_ACT1"
+        },
+        {
+          "abap_type": "P",
+          "decimals": 2,
+          "length": null,
+          "name": "V_ACT2"
+        },
+        {
+          "abap_type": "P",
+          "decimals": 2,
+          "length": null,
+          "name": "V_ACT3"
+        },
+        {
+          "abap_type": "P",
+          "decimals": 2,
+          "length": null,
+          "name": "P_TOT1"
+        },
+        {
+          "abap_type": "P",
+          "decimals": 2,
+          "length": null,
+          "name": "P_TOT2"
+        },
+        {
+          "abap_type": "P",
+          "decimals": 2,
+          "length": null,
+          "name": "P_TOT3"
+        },
+        {
+          "abap_type": "P",
+          "decimals": 2,
+          "length": null,
+          "name": "A_TOT1"
+        },
+        {
+          "abap_type": "P",
+          "decimals": 2,
+          "length": null,
+          "name": "A_TOT2"
+        },
+        {
+          "abap_type": "P",
+          "decimals": 2,
+          "length": null,
+          "name": "A_TOT3"
+        },
+        {
+          "abap_type": "P",
+          "decimals": 2,
+          "length": null,
+          "name": "V_TOT1"
+        },
+        {
+          "abap_type": "P",
+          "decimals": 2,
+          "length": null,
+          "name": "V_TOT2"
+        },
+        {
+          "abap_type": "P",
+          "decimals": 2,
+          "length": null,
+          "name": "V_TOT3"
+        }
+      ],
+      "length": null,
+      "name": "T_DATA1",
+      "optional": true,
+      "rowtype": "ZTYSERNUM2"
+    }
+  ]
+}

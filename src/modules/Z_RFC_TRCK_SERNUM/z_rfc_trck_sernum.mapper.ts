@@ -10,28 +10,52 @@ const OMIT_FIELDS = new Set([
   'ASSY',
   'PAINT',
   'PACKG',
+  'P_MAT1',
+  'P_MAT2',
+  'P_MAT3',
+  'A_MAT1',
+  'A_MAT2',
+  'A_MAT3',
+  'V_MAT1',
+  'V_MAT2',
+  'V_MAT3',
+  'P_ACT1',
+  'P_ACT2',
+  'P_ACT3',
+  'A_ACT1',
+  'A_ACT2',
+  'A_ACT3',
+  'V_ACT1',
+  'V_ACT2',
+  'V_ACT3',
+  'P_TOT1',
+  'P_TOT2',
+  'P_TOT3',
+  'A_TOT1',
+  'A_TOT2',
+  'A_TOT3',
+  'V_TOT1',
+  'V_TOT2',
+  'V_TOT3',
 ]);
 
 const RENAME_MAP: Record<string, string> = {
   // serial
   SERIAL_NO: 'serial_number',
-
   // Net Price
   NETPR: 'net_price',
-
+  // Standart Price
+  STPRS: 'standard_price',
   // Currency
   WAERK: 'currency',
-
   // Material Inspection
   MATNR1: 'material_inspection_assy',
   MATNR2: 'material_inspection_painting',
   MATNR3: 'material_inspection_packing',
-
   // Material Number
   MATNR1X: 'material_assy',
   MATNR2X: 'material_painting',
   MATNR3X: 'material_packing',
-
   // Batch Number Inspection
   CHARG1: 'batch_inspection_assy',
   CHARG2: 'batch_inspection_painting',
@@ -40,57 +64,50 @@ const RENAME_MAP: Record<string, string> = {
   CHARG1X: 'batch_assy',
   CHARG2X: 'batch_painting',
   CHARG3X: 'batch_packing',
-
   // Storage location
   LGORT1X: 'storage_assy',
   LGORT2X: 'storage_painting',
   LGORT3X: 'storage_packing',
-
   // Storage location Inspection
   LGORT1: 'storage_inspection_assy',
   LGORT2: 'storage_inspection_painting',
   LGORT3: 'storage_inspection_packing',
-
   // Order
   AUFNR1X: 'pro_assy',
   AUFNR2X: 'pro_painting',
   AUFNR3X: 'pro_packing',
-
   // Order Inspection
   AUFNR1: 'pro_inspection_assy',
   AUFNR2: 'pro_inspection_painting',
   AUFNR3: 'pro_inspection_packing',
-
   // MRP
   DISPO1X: 'mrp_assy',
   DISPO2X: 'mrp_painting',
   DISPO3X: 'mrp_packing',
-
   // MRP Inspection
   DISPO1: 'mrp_inspection_assy',
   DISPO2: 'mrp_inspection_painting',
   DISPO3: 'mrp_inspection_packing',
-
   // Material document
   MBLNR1X: 'material_doc_assy',
   MBLNR2X: 'material_doc_painting',
   MBLNR3X: 'material_doc_packing',
-
   // Material document Inspection
   MBLNR1: 'material_doc_inspection_assy',
   MBLNR2: 'material_doc_inspection_painting',
   MBLNR3: 'material_doc_inspection_packing',
-
   // Posting date
   BUDAT1X: 'posting_date_assy',
   BUDAT2X: 'posting_date_painting',
   BUDAT3X: 'posting_date_packing',
-
   // Posting date Inspection
   BUDAT1: 'posting_date_inspection_assy',
   BUDAT2: 'posting_date_inspection_painting',
   BUDAT3: 'posting_date_inspection_packing',
-
+  // Release date
+  FTRMS1: 'release_date_assy',
+  FTRMS2: 'release_date_painting',
+  FTRMS3: 'release_date_packing',
   // Personel Number
   PERNR1X: 'person_assy',
   PERNR2X: 'person_painting',
