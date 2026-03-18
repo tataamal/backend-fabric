@@ -22,10 +22,13 @@
   "dependencies": {
     "@azure/identity": "^4.13.0",
     "@azure/storage-file-datalake": "^12.29.0",
+    "@nestjs/axios": "^4.0.1",
     "@nestjs/common": "^11.0.1",
     "@nestjs/config": "^4.0.3",
     "@nestjs/core": "^11.0.1",
     "@nestjs/platform-express": "^11.0.1",
+    "@nestjs/schedule": "^6.1.1",
+    "axios": "^1.13.6",
     "node-rfc": "^3.3.1",
     "reflect-metadata": "^0.2.2",
     "rxjs": "^7.8.1"

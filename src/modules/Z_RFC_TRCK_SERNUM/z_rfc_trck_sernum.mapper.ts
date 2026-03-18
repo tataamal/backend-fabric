@@ -37,6 +37,7 @@ const OMIT_FIELDS = new Set([
   'V_TOT1',
   'V_TOT2',
   'V_TOT3',
+  'SERNR',
 ]);
 
 const RENAME_MAP: Record<string, string> = {
@@ -122,8 +123,19 @@ const RENAME_MAP: Record<string, string> = {
 function toIsoDateIfSapDate(v: any): any {
   if (typeof v !== 'string') return v;
   const s = v.trim();
+  if (s === '00000000' || s === '0000-00-00') return null;
   if (!/^\d{8}$/.test(s)) return v;
   return `${s.slice(0, 4)}-${s.slice(4, 6)}-${s.slice(6, 8)}`;
+}
+
+function cleanMatnr(v: any): any {
+  if (typeof v !== 'string') return v;
+  const s = v.trim();
+  if (/^\d+$/.test(s)) {
+    const stripped = s.replace(/^0+/, '');
+    return stripped === '' ? '0' : stripped;
+  }
+  return v;
 }
 
 function stripLeadingZeros(v: any): string {
@@ -159,9 +171,13 @@ export function normalizeTData1(rows: SapRow[] | undefined | null): SapRow[] {
       if (OMIT_FIELDS.has(sapKey)) continue;
 
       const newKey = RENAME_MAP[sapKey] ?? sapKey.toLowerCase();
-      const newValue = sapKey.startsWith('BUDAT')
-        ? toIsoDateIfSapDate(value)
-        : value;
+
+      let newValue = value;
+      if (sapKey.startsWith('BUDAT')) {
+        newValue = toIsoDateIfSapDate(value);
+      } else if (/^MATNR[123]X?$/.test(sapKey)) {
+        newValue = cleanMatnr(value);
+      }
 
       out[newKey] = newValue;
     }
