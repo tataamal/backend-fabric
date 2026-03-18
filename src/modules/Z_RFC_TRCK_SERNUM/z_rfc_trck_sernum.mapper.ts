@@ -173,7 +173,7 @@ export function normalizeTData1(rows: SapRow[] | undefined | null): SapRow[] {
       const newKey = RENAME_MAP[sapKey] ?? sapKey.toLowerCase();
 
       let newValue = value;
-      if (sapKey.startsWith('BUDAT')) {
+      if (sapKey.startsWith('BUDAT') || sapKey.startsWith('FTRMS')) {
         newValue = toIsoDateIfSapDate(value);
       } else if (/^MATNR[123]X?$/.test(sapKey)) {
         newValue = cleanMatnr(value);

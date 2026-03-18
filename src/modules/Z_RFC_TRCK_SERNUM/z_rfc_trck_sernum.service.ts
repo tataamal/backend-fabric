@@ -57,7 +57,7 @@ export class ZRfcTrckSernumService {
             return: sapResult?.RETURN ?? null,
           });
 
-          continue; // jangan upload kalau gagal
+          continue;
         }
 
         const normalizedRows = normalizeTData1(sapResult?.T_DATA1);
