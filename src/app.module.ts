@@ -10,6 +10,8 @@ import { ZRfcTrckSernumScheduler } from './modules/Z_RFC_TRCK_SERNUM/z_rfc_trck_
 import { ZFmRecVendorService } from './modules/Z_FM_REC_VENDOR/z_fm_rec_vendor.service';
 import { ZFmRecVendorController } from './modules/Z_FM_REC_VENDOR/z_fm_rec_vendor.controller';
 import { ZFmRecVendorScheduler } from './modules/Z_FM_REC_VENDOR/z_fm_rec_vendor.scheduler';
+import { ZFmYppr009Service } from './modules/Z_FM_YPPR009/z_fm_yppr009.service';
+import { ZFmYppr009Controller } from './modules/Z_FM_YPPR009/z_fm_yppr009.controller';
 
 @Module({
   imports: [
@@ -24,7 +26,8 @@ import { ZFmRecVendorScheduler } from './modules/Z_FM_REC_VENDOR/z_fm_rec_vendor
     ZRfcTrckSernumScheduler,
     ZFmRecVendorService,
     ZFmRecVendorScheduler,
+    ZFmYppr009Service,
   ],
-  controllers: [ZRfcTrckSernumController, ZFmRecVendorController],
+  controllers: [ZRfcTrckSernumController, ZFmRecVendorController, ZFmYppr009Controller],
 })
 export class AppModule {}

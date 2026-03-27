@@ -29,6 +29,7 @@
     "@nestjs/platform-express": "^11.0.1",
     "@nestjs/schedule": "^6.1.1",
     "axios": "^1.13.6",
+    "class-validator": "^0.15.1",
     "node-rfc": "^3.3.1",
     "reflect-metadata": "^0.2.2",
     "rxjs": "^7.8.1",
